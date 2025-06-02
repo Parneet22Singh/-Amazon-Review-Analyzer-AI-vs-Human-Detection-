@@ -23,6 +23,9 @@ This project is an AI-powered tool that scrapes Amazon product reviews and analy
 - `Scraper.py`:  
   Uses Selenium to scrape Amazon product reviews from a given URL, handling multiple pages and saving the collected reviews to a CSV file.
 
+- `label.py`:  
+  Processes raw scraped reviews to label them as AI-generated or human-written, and performs sentiment analysis to quantify review positivity or negativity. This labeled data is then used for training or evaluation.
+
 - `App.py`:  
   Streamlit app that takes a product review URL input, scrapes reviews, predicts AI vs human labels, performs sentiment analysis, and displays results and purchase suggestions.
 
@@ -36,7 +39,7 @@ This project is an AI-powered tool that scrapes Amazon product reviews and analy
 
 ## Data Labeling Process
 
-The labeled dataset used to train the AI vs Human review classification model is prepared separately. After scraping raw reviews, a labeling script is run to assign labels indicating whether a review is AI-generated or human-written. This labeling also includes sentiment analysis to understand how positive or negative the reviews are, helping assess the overall product quality.
+After scraping raw reviews using `Scraper.py`, the `label.py` script is run to assign labels indicating whether each review is AI-generated or human-written. It also performs sentiment analysis on the reviews to measure their overall positivity or negativity, which helps assess the product’s quality. This labeled data is essential for training the classification model in `Train_model.py`.
 
 ---
 
