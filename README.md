@@ -1,5 +1,3 @@
-Certainly! Here’s a complete, updated README incorporating all parts including scraping, labeling, training, and the Streamlit app:
-
 ---
 
 # Amazon Review Analyzer
