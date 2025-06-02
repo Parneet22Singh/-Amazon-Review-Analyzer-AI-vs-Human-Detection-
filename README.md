@@ -7,7 +7,7 @@ This project is an AI-powered tool that scrapes Amazon product reviews and analy
 ## Features
 
 - **Web Scraping:** Uses Selenium to scrape multiple pages of Amazon product reviews automatically.
-- **AI vs Human Detection:** A Logistic Regression model trained to classify reviews as AI-generated or human-written.
+- **AI vs Human Detection:** A Logistic Regression model trained on a labeled dataset to classify reviews as AI-generated or human-written.
 - **Sentiment Analysis:** Calculates sentiment polarity for each review to assess overall positivity or negativity.
 - **Summary Report:** Displays counts and percentages of AI vs human reviews, average sentiment score.
 - **Purchase Suggestion:** Provides user-friendly advice based on AI presence and sentiment analysis.
@@ -31,6 +31,12 @@ This project is an AI-powered tool that scrapes Amazon product reviews and analy
 
 - `preprocess.py`:  
   (Assumed) Contains text cleaning and vectorization helper functions.
+
+---
+
+## Data Labeling Process
+
+The labeled dataset used to train the AI vs Human review classification model is prepared separately. After scraping raw reviews, a labeling script is run to assign labels indicating whether a review is AI-generated or human-written. This labeling also includes sentiment analysis to understand how positive or negative the reviews are, helping assess the overall product quality.
 
 ---
 
